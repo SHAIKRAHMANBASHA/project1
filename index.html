@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="page">
+            <!---login coding start here---------->
+            <div id="login" class="animate__animated animate__flipInY">
+                <form action="" id="login_frm">
+
+                    <h1 align="center">Login</h1>
+                    <input type="email" name="email" placeholder="Username" id="login_email" autocomplete="off">
+                    <small id="login_email_notice"><i class="fa-solid fa-triangle-exclamation"></i>your email id not
+                        registered</small>
+                    <input type="password" name="password" id="login_password" placeholder="Password">
+                    <small id="login_password_notice"><i class="fa-solid fa-triangle-exclamation"></i>wrong
+                        password</small>
+                    <input type="submit" value="login" id="login_btn">
+
+                </form>
+                <p>Don't have an account?<span id="sign_span"> Sign up</span></p>
+            </div>
+            <!--------------sign up-------------->
+            <div id="signup" class="animate__animated animate__flipInY">
+                <form id="signup_frm">
+                    <h1 align="center">sign up</h1>
+                    <input type="text" id="sign_name" placeholder="Name" autocomplete="off" required="required">
+                    <input type="email" id="sign_email" placeholder="Email" autocomplete="off" required="required">
+                    <small id="email_notice"><i class="fa-solid fa-triangle-exclamation"></i>Email id already
+                        exist</small>
+                    <input type="number" id="sign_mobile" placeholder="Phone" autocomplete="off" required="required">
+                    <input type="password" id="sign_pass" placeholder="Password" autocomplete="off" required="required">
+                    <button id="sign_btn">Sign Up</button>
+                </form>
+                <p>Already have an account? <span id="login_span">Login</span></p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <script src="login_signup.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
