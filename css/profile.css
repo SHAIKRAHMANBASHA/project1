@@ -41,6 +41,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 #profile_user_icon {
@@ -108,6 +109,7 @@ body {
     background-image: url("../image/header_profile.jpg");
     background-position: center;
     background-size: cover;
+    
 }
 
 #profile_main_circle {
@@ -115,7 +117,7 @@ body {
     height: 160px;
     border: 5px solid white;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     top: 60px;
     left: 50%;
     transform: translate(-50%);
@@ -126,7 +128,6 @@ body {
     margin-top: 90px;
 }
 #app{
-    border: 1px solid red;
     width: 100%;
     height: 250px;
     margin-bottom: 5px;
@@ -151,6 +152,7 @@ body {
     height: 170px;
     box-shadow: 0px 0px 15px #02f8e3;
     transition: 1s;
+    cursor: pointer;
 }
 #contact i,#player i,#logout i{
     font-size: 40px;
