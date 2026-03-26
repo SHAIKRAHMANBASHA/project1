@@ -1,4 +1,4 @@
-window.onload = function () {
+
     if (sessionStorage.getItem("user") == null) {
         window.location.replace("index.html");
     }
@@ -16,13 +16,7 @@ window.onload = function () {
                 },2000)
             }
             
-            //contact 
-
-            var contact = document.getElementById("contact");
-            contact.onclick = function()
-            {
-                window.location="contact/files/contact.html";
-            }
+            
 
         //profile name coding
         var user_email = sessionStorage.getItem("user");
@@ -71,9 +65,8 @@ window.onload = function () {
                     profile_container.style.display="none";
                     //var profile_main_circle =document.getElementById("profile_main_circle");
                     //profile_main_circle.style.display="block";
-                    window.location =location.href;
+                    
                 }
             }
         }
     }
-}

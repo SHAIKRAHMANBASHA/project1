@@ -142,3 +142,10 @@ body{
     margin-top: -13px;
     padding-left: 20px;
 }
+@media screen and (max-width:1024px)
+{
+    #contact_header{
+        height: 20%;
+    }
+    
+}
