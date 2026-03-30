@@ -57,6 +57,7 @@ else {
                 var contact_box = document.createElement("DIV");
                 contact_box.setAttribute("id", "contact");
                 var name_p = document.createElement("P");
+                name_p.setAttribute("class", "contact_search");
                 var name_i = document.createElement("I");
                 name_i.setAttribute("class", "fas fa-user");
                 var tool = document.createElement("DIV");
@@ -93,7 +94,23 @@ else {
     }
     all_contacts();
 
+    // contact search coding start here //
 
-
+    var search = document.getElementById("search");
+    search.oninput = function () {
+        var contact_name = document.getElementsByClassName("contact_search");
+        var i;
+        for (i=0;i<contact_name.length;i++)
+        {
+            if(contact_name[i].innerHTML.toUpperCase().match(search.value.toUpperCase()))
+            {
+              contact_name[i].parentElement.style.display="block";
+            }
+            else
+            {
+                contact_name[i].parentElement.style.display="none";
+            }
+        }
+    }
 
 }
