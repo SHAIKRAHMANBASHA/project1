@@ -65,7 +65,7 @@ else {
                 var edit_i = document.createElement("I");
                 edit_i.setAttribute("class", "fas fa-edit");
                 var trash_i = document.createElement("I");
-                trash_i.setAttribute("class", "fas fa-trash");
+                trash_i.setAttribute("class", "fas fa-trash del");
                 var line = document.createElement("HR");
                 line.setAttribute("width", "75%");
                 line.setAttribute("color", "purple");
@@ -100,16 +100,30 @@ else {
     search.oninput = function () {
         var contact_name = document.getElementsByClassName("contact_search");
         var i;
-        for (i=0;i<contact_name.length;i++)
-        {
-            if(contact_name[i].innerHTML.toUpperCase().match(search.value.toUpperCase()))
-            {
-              contact_name[i].parentElement.style.display="block";
+        for (i = 0; i < contact_name.length; i++) {
+            if (contact_name[i].innerHTML.toUpperCase().match(search.value.toUpperCase())) {
+                contact_name[i].parentElement.style.display = "block";
             }
-            else
-            {
-                contact_name[i].parentElement.style.display="none";
+            else {
+                contact_name[i].parentElement.style.display = "none";
             }
+        }
+    }
+    // delete icon functionality in contact list
+    var del = document.getElementsByClassName("del");
+    var i;
+    for (i = 0; i < del.length; i++) {
+        del[i].onclick = function () {
+            var parent = this.parentElement.parentElement;
+            var contactname = parent.getElementsByClassName("contact_search")[0];
+            var username = contactname.innerHTML.replace('<i class="fas fa-user"></i>', '');
+            localStorage.removeItem(current_user + "_contact" + username.trim())
+            parent.className = "animate__animated animate__bounceOut";
+
+            setTimeout(function () {
+                parent.remove();
+
+            }, 1000);
         }
     }
 
